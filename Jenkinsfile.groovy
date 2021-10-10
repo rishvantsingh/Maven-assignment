@@ -3,7 +3,8 @@ pipeline{
     agent any 
 
     tools{
-maven "maven"
+maven "MAVEN"
+        jdk 'JAVA'
     }
 
     stages{
@@ -24,6 +25,13 @@ maven "maven"
                 }
 
 
+        }
+        
+        stage('Package')
+        {
+            steps{
+                sh 'mvn package'
+            }
         }
     }
 }
