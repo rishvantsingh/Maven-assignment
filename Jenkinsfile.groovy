@@ -35,14 +35,14 @@ maven "MAVEN"
         
         stage('Compiling'){
             steps{
-                sh 'mvn compile package'
+                sh 'mvn compile'
         }
         }
         
         stage('Package')
         {
             steps{
-                sh 'mvn install'
+                sh 'mvn package'
             }
         }
     }
