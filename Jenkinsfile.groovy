@@ -27,7 +27,7 @@ maven "MAVEN"
         
         stage('Compiling'){
             steps{
-                sh 'compile'
+                sh 'mvn compile'
         }
         }
         
