@@ -8,6 +8,14 @@ maven "MAVEN"
     }
 
     stages{
+        
+        stage('cleanup')
+        
+        {
+            steps{
+                cleanWs()
+            }
+        }
 
         stage('Checkout'){
             steps{
