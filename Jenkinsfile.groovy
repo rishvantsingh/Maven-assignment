@@ -20,11 +20,15 @@ maven "MAVEN"
 
             steps{
                 
-                sh 'mvn clean install -f pom.xml'
+                sh 'mvn clean'
                 
                 }
-
-
+        }
+        
+        stage('Compiling'){
+            steps{
+                sh 'compile'
+        }
         }
         
         stage('Package')
